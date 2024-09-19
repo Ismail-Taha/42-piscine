@@ -1,41 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isallali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 15:41:05 by isallali          #+#    #+#             */
-/*   Updated: 2024/08/28 16:18:26 by isallali         ###   ########.fr       */
+/*   Created: 2024/09/16 18:51:42 by isallali          #+#    #+#             */
+/*   Updated: 2024/09/16 18:53:33 by isallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_comb(void)
+void	ft_swap(int *a, int *b)
 {
-	int	a;
-	int	b;
-	int	c;
+	int	tmp;
 
-	a = '0';
-	while (a <= 55)
-	{
-		b = a + 1;
-		while (b <= 56)
-		{
-			c = b + 1;
-			while (c <= 57)
-			{
-				write(1, &a, 1);
-				write(1, &b, 1);
-				write(1, &c, 1);
-				if (a != 55)
-					write(1, ", ", 2);
-				c++;
-			}
-			b++;
-		}
-		a++;
-	}
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

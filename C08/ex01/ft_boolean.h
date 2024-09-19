@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isallali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 14:36:03 by isallali          #+#    #+#             */
-/*   Updated: 2024/08/29 13:44:55 by isallali         ###   ########.fr       */
+/*   Created: 2024/09/14 15:44:52 by isallali          #+#    #+#             */
+/*   Updated: 2024/09/14 22:29:26 by isallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-void	ft_print_numbers(void)
-{
-	int	i;
+# include <unistd.h>
 
-	i = 48;
-	while (i <= 57)
-	{
-		write(1, &i, 1);
-		i++;
-	}
-}
+typedef int	t_bool;
+# define TRUE 1
+# define FALSE 0
+# define EVEN(nbr) (nbr % 2 == 0)
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
+
+#endif /*FT_BOOLEAN_H*/

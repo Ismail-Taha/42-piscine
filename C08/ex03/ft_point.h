@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isallali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/02 15:23:32 by isallali          #+#    #+#             */
-/*   Updated: 2024/09/02 16:25:14 by isallali         ###   ########.fr       */
+/*   Created: 2024/09/15 00:03:13 by isallali          #+#    #+#             */
+/*   Updated: 2024/09/16 14:48:41 by isallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	i;
-	unsigned int	j;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < nb)
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+typedef struct point
+{
+	int	x;
+	int	y;
+}	t_point;
+
+#endif /*FT_POINT_H*/
